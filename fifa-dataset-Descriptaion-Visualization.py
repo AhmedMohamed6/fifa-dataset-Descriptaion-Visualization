@@ -12,7 +12,7 @@ def Data_Description():
     f"""
     <style>
         .line{{
-            border: 1px solid black;
+            border: 1px solid white;
             margin: 25px 0;
         }}
     </style>
