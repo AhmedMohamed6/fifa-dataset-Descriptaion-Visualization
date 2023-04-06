@@ -7,7 +7,6 @@ def Data_Description():
         st.title('Data Descriptaion')
         st.header('Data Head')
         st.write(df.head(10))
-        col1 , col2 = st.columns(2)
         st.write(
     f"""
     <style>
@@ -20,6 +19,8 @@ def Data_Description():
     """,
     unsafe_allow_html=True,
 )    
+        col1 , col2 = st.columns(2)
+        
         with col1:
             st.header(' Data Info ' )
             buffer = io.StringIO()
@@ -29,6 +30,18 @@ def Data_Description():
         with col2:
             st.header('Data Description')
             st.write(df.describe())
+        st.write(
+    f"""
+    <style>
+        .line{{
+            border: 1px solid white;
+            margin: 25px 0;
+        }}
+    </style>
+    <div class="line"></div>
+    """,
+    unsafe_allow_html=True,
+)            
         st.header('Categories Distribution')    
         Col3 , Col4 ,Col5 , Col6  = st.columns([1.5,1.5,1,1])
         with Col3 :
