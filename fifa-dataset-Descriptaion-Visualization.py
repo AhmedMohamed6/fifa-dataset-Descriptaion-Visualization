@@ -8,6 +8,18 @@ def Data_Description():
         st.header('Data Head')
         st.write(df.head(10))
         col1 , col2 = st.columns(2)
+        st.write(
+    f"""
+    <style>
+        .line{{
+            border: 1px solid black;
+            margin: 25px 0;
+        }}
+    </style>
+    <div class="line"></div>
+    """,
+    unsafe_allow_html=True,
+)    
         with col1:
             st.header(' Data Info ' )
             buffer = io.StringIO()
